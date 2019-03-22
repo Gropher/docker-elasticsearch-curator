@@ -20,8 +20,6 @@ COPY config.yml /
 COPY actions.yml /
 
 ENV INTERVAL_IN_HOURS=24
-ENV OLDER_THAN_IN_DAYS="20"
-ENV ELASTICSEARCH_HOST=elasticsearch
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 

@@ -7,10 +7,7 @@
 actions:
   1:
     action: delete_indices
-    description: >-
-      Delete indices older than specified number of days (based on index name), for logstash-
-      prefixed indices. Ignore the error if the filter does not result in an
-      actionable list of indices (ignore_empty_list) and exit cleanly.
+    description: "Delete selected indices"
     options:
       ignore_empty_list: True
       disable_action: False
@@ -23,4 +20,4 @@ actions:
       direction: older
       timestring: '%Y.%m.%d'
       unit: days
-      unit_count: ${OLDER_THAN_IN_DAYS}
+      unit_count: 7
